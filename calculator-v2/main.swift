@@ -59,3 +59,29 @@ func avg(nums: [Int]) -> Int {
 func mathArrOp(nums: [Int], op: ([Int]) -> Int) -> Int {
     return op(nums)
 }
+
+// Points
+
+func addTuples(p1: (Int, Int), p2: (Int, Int)) -> (Int, Int) {
+    return (p1.0 + p2.0, p1.1 + p2.1)
+}
+
+func subtractTuples(p1: (Int, Int), p2: (Int, Int)) -> (Int, Int) {
+    return (p1.0 - p2.0, p1.1 - p2.1)
+}
+
+func addPoints(p1: [String: Double], p2: [String: Double]) -> (Double, Double) {
+    if p1["x"] == nil || p1["y"] == nil || p2["x"] == nil || p2["y"] == nil {
+        print("Invalid Parameters. Missing a coordinate value.")
+        exit(1)
+    }
+    return (p1["x"]! + p2["x"]!, p1["y"]! + p2["y"]!)
+}
+
+func subtractPoints(p1: [String: Double], p2: [String: Double]) -> (Double, Double) {
+    if p1["x"] == nil || p1["y"] == nil || p2["x"] == nil || p2["y"] == nil {
+        print("Invalid Parameters. Missing a coordinate value.")
+        exit(1)
+    }
+    return (p1["x"]! - p2["x"]!, p1["y"]! - p2["y"]!)
+}
